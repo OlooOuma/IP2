@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>MY BLOGS</h1>
+       <p> {{pitch.pitch}}</p>
+         {%if comments%}
+         {% for comment in comments %}
+            <p>{{comment.Pitchcom}}</p>
+
+{{wtf.quick_form(PitchForm)}}
+{%endblock%}

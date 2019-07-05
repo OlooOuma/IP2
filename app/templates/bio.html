@@ -1,0 +1,11 @@
+<div class="col-md-8">
+    <a href="/blog" >Write a Pitch</a> <br><hr>
+               <h1>LIST OF ALL PITCHES</h1>
+     {% for pitch in pitch %}
+    <blockquote>
+    {{pitch.pitch}}
+    </blockquote>
+    <a href="/blog/{{pitch.id}}"><span class="glyphicon glyphicon-comment"></span></a>
+    <h1>{{pitch.user.username}}</h1>
+     {% endfor %}
+         </div>

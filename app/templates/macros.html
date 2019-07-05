@@ -1,0 +1,19 @@
+{% macro displayComments(comments) %}
+   {% for comment in comments %}
+
+   <table style="width:100%">
+     <tr>
+       <th>Title</th>
+       <th>Comment</th>
+       <th>User</th>
+       <th>Delete</th>
+     </tr>
+     <tr>
+       <td>{{comment.title}}</td>
+       <td>{{comment.comment}}</td>
+       <td>{{comment.user.username}}</td>
+       <td><a href="{{url_for('main.del_comment',pitch_id = comment.pitch_id, comment_id = comment.id)}}"><button type="button" name="button" class="btn btn-warning">Delete Comment</button></a></td>
+     </tr>
+   </table>
+   {% endfor %}
+{% endmacro %}
