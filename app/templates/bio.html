@@ -1,11 +1,22 @@
-<div class="col-md-8">
-    <a href="/blog" >Write a Pitch</a> <br><hr>
-               <h1>LIST OF ALL PITCHES</h1>
-     {% for pitch in pitch %}
-    <blockquote>
-    {{pitch.pitch}}
-    </blockquote>
-    <a href="/blog/{{pitch.id}}"><span class="glyphicon glyphicon-comment"></span></a>
-    <h1>{{pitch.user.username}}</h1>
-     {% endfor %}
-         </div>
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="text-center">
+                <a href="/blog">Pitch</a><br> <hr>
+                <h1>POSTED PITCHES</h1>
+                {% for pitch in pitch %}
+                <blockquote>
+                    {{pitch.pitch}}
+                </blockquote>
+                <a href="/blog/{{pitch.id}}"><span class="glyphicon glyphicon-comment"></span></a>
+                <h1>{{pitch.user.username}}</h1>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
