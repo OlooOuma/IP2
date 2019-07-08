@@ -2,9 +2,14 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block content %}
-
-
-{{wtf.quick_form(form)}}
-
+<body>
+    <div class="bg-img">
+        <div class="row">
+            <div class="col-sm-12">
+                {{wtf.quick_form(form)}}
+            </div>
+        </div>
+    </div>
+</body>
 
 {% endblock %}
